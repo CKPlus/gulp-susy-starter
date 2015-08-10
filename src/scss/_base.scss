@@ -1,0 +1,55 @@
+// ---------------------------------------------------------------------------
+// Imports
+
+//@import '../../bower_components/breakpoint-sass/stylesheets/breakpoint';
+@import '../../bower_components/susy/sass/susy';
+
+@import '../../bower_components/compass-mixins/lib/compass';
+
+// @import 'mixins/replace-text-with-svg';
+
+// ---------------------------------------------------------------------------
+// Variable Settings
+
+//@import 'variable';
+
+// ---------------------------------------------------------------------------
+// Basic Grid
+
+// Default mobile-first grid setup
+$total-columns : 4;
+$column-width : 3.75em;
+
+$tablet-columns:  12;
+$tablet-width:    768px;
+
+$laptop-columns:  12;
+$laptop-width:    960px;
+
+$desktop-columns: 15;
+$desktop-width  : 1200px;
+
+$container-width: 100%;       // makes container fill the screen by default (we override this on $desktop)
+
+$container-style: fluid;
+$from-direction: left;
+$omega-float: left;
+
+$breakpoint-no-query-fallbacks: true;
+
+$susy: (
+  // the basics
+  columns: $total-columns,
+  column-width: $column-width,
+  container: $container-width,
+  debug: (
+    image: show,
+    color: rgba(#66f, .25),
+    output: background,
+    toggle: top right,
+  ),
+);
+
+$tablet: $tablet-width, $tablet-columns $tablet-width;
+$laptop: $laptop-width, $laptop-columns $laptop-width;
+$desktop: $desktop-width, $desktop-columns $container-width;

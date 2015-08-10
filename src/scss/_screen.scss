@@ -1,0 +1,45 @@
+// ---------------------------------------------------------------------------
+// Imports
+
+@import 'base';
+
+// -------------------------------------------------------------------------//
+// Layout //
+
+* {
+  @include box-sizing(border-box);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.site-container {
+  min-height: 100%;
+  margin: 0 auto -80px; // the bottom margin is the negative value of the footer's height
+}
+
+.site-footer,
+.site-footer-shim {
+  height: 80px;
+}
+
+html {
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  .form-control,
+  .btn {
+    font-family: "Helvetica Neue", Helvetica, Arial, 'Microsoft Jhenghei', '微軟正黑體', sans-serif;
+  }
+}
+
+.hide-text {
+  display: none;
+}
