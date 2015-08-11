@@ -1,8 +1,33 @@
 @import "base";
 
 
+.container {
 
-body {
-	width:500px;
-	background-color: #f0f0f0;
+  h1 {
+    font-size: 36px;
+    padding: 20px 0px;
+  }
+
+  p {
+    font-size: 24px;
+    line-heigh: 30px;
+  }
+	
+	@include container;
+
+    // Tablet breakpoint
+    @include susy-breakpoint($tablet...) {
+      @include container($tablet-width);
+    }
+
+    // Laptop breakpoint
+    @include susy-breakpoint($laptop...) {
+      @include container($laptop-width);
+    }
+
+    // Desktop breakpoint
+    @include susy-breakpoint($desktop...) {
+      @include container($desktop-width);
+    }
+
 }

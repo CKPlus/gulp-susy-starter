@@ -1,7 +1,7 @@
 // ---------------------------------------------------------------------------
 // Imports
 
-//@import '../../bower_components/breakpoint-sass/stylesheets/breakpoint';
+@import '../../bower_components/breakpoint-sass/stylesheets/breakpoint';
 @import '../../bower_components/susy/sass/susy';
 
 @import '../../bower_components/compass-mixins/lib/compass';
@@ -35,19 +35,24 @@ $container-style: fluid;
 $from-direction: left;
 $omega-float: left;
 
-$breakpoint-no-query-fallbacks: true;
+@include breakpoint-set('no query fallbacks', true);
 
 $susy: (
   // the basics
   columns: $total-columns,
   column-width: $column-width,
   container: $container-width,
+  math: $container-style,
+  global-box-sizing: border-box,
   debug: (
-    image: show,
+    image: show, // show, hide, show-columns, show-baseline
     color: rgba(#66f, .25),
     output: background,
     toggle: top right,
   ),
+  use-custom: (
+    background-image: false,
+  )
 );
 
 $tablet: $tablet-width, $tablet-columns $tablet-width;
