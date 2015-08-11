@@ -23,6 +23,13 @@ npm install
 
 This runs through all dependencies listed in `package.json` and downloads them to a `node_modules` folder in your project directory.
 
+### Install bower components
+To install susy and breakpoint components
+```
+bower install
+```
+
+
 ### The `gulp` command
 To run the version of gulp installed local to the project, in the root of your this project, you'd run
 
